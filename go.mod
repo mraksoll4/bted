@@ -17,6 +17,7 @@ require (
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	golang.org/x/sys v0.0.0-20200814200057-3d37ad5750ed
+	github.com/mraksoll4/bitweb_yespower_go v1.0.0
 )
 
 require (
