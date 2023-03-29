@@ -41,6 +41,12 @@ const (
 	// baseSubsidy is the starting subsidy amount for mined blocks.  This
 	// value is halved every SubsidyHalvingInterval blocks.
 	baseSubsidy = 50 * btcutil.SatoshiPerBitcoin
+
+    // baseSubsidy2 is the subsidy amount at block height 1.
+    baseSubsidy2 = 2580000 * btcutil.SatoshiPerBitcoin
+
+    // baseSubsidy3 is the subsidy amount at block height 939796.
+    baseSubsidy3 = 9420050 * btcutil.SatoshiPerBitcoin
 )
 
 var (
@@ -170,14 +176,15 @@ func IsFinalizedTransaction(tx *btcutil.Tx, blockHeight int32, blockTime time.Ti
 // two blocks that violate the BIP0030 rule which prevents transactions from
 // overwriting old ones.
 func isBIP0030Node(node *blockNode) bool {
-	if node.height == 91842 && node.hash.IsEqual(block91842Hash) {
-		return true
-	}
-
-	if node.height == 91880 && node.hash.IsEqual(block91880Hash) {
-		return true
-	}
-
+// We enforce bip30 ,we dont have that blocks at our network.	
+//	if node.height == 91842 && node.hash.IsEqual(block91842Hash) {
+//		return true
+//	}
+//
+//	if node.height == 91880 && node.hash.IsEqual(block91880Hash) {
+//		return true
+//	}
+//
 	return false
 }
 
@@ -191,13 +198,26 @@ func isBIP0030Node(node *blockNode) bool {
 //
 // At the target block generation rate for the main network, this is
 // approximately every 4 years.
-func CalcBlockSubsidy(height int32, chainParams *chaincfg.Params) int64 {
-	if chainParams.SubsidyReductionInterval == 0 {
-		return baseSubsidy
-	}
+//func CalcBlockSubsidy(height int32, chainParams *chaincfg.Params) int64 {
+//	if chainParams.SubsidyReductionInterval == 0 {
+//		return baseSubsidy
+//	}
+//
+//	// Equivalent to: baseSubsidy / 2^(height/subsidyHalvingInterval)
+//	return baseSubsidy >> uint(height/chainParams.SubsidyReductionInterval)
+//}
 
-	// Equivalent to: baseSubsidy / 2^(height/subsidyHalvingInterval)
-	return baseSubsidy >> uint(height/chainParams.SubsidyReductionInterval)
+func CalcBlockSubsidy(height int32, chainParams *chaincfg.Params) int64 {
+    switch {
+    case height == 1:
+        return baseSubsidy2
+    case height == 939796:
+        return baseSubsidy3
+    case chainParams.SubsidyReductionInterval == 0:
+        return baseSubsidy
+    default:
+        return baseSubsidy >> uint(height/chainParams.SubsidyReductionInterval)
+    }
 }
 
 // CheckTransactionSanity performs some preliminary checks on a transaction to
