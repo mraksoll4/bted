@@ -48,14 +48,18 @@ const blockHeaderLen = 80
 
 // BlockHash computes the block identifier hash for the given block header.
 func (h *BlockHeader) BlockHash() chainhash.Hash {
+	var blockhash chainhash.Hash
 	// Encode the header and double sha256 everything prior to the number of
 	// transactions.  Ignore the error returns since there is no way the
 	// encode could fail except being out of memory which would cause a
 	// run-time panic.
 	buf := bytes.NewBuffer(make([]byte, 0, MaxBlockHeaderPayload))
 	_ = writeBlockHeader(buf, 0, h)
+       
+	hashedYespower := bitweb_yespower_go.YespowerHash(buf.Bytes())
+	copy(blockhash[:], hashedYespower)
 
-	return bitweb_yespower_go.yespower(buf.Bytes())
+	return blockhash
 }
 
 // BtcDecode decodes r using the bitcoin protocol encoding into the receiver.
