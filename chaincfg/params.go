@@ -300,25 +300,24 @@ var MainNetParams = Params{
 	GenerateSupported:        false,
 
 	// Checkpoints ordered from oldest to newest.
-	Checkpoints: []Checkpoint{
-        {0, newHashFromStr("0x00043e9c6bc54d9bd266c3767a83a7b9da435dd7f84e485a2bf2a869be62f1f3")},
-        {1, newHashFromStr("0x001d498cbcd92d9b36fee933caf1551dd457bf710ec988e033faca697aff6a90")},
-        {15, newHashFromStr("0x0013c1537f3c4984241c3c5b93d894dfef491eef0b82d87a5b7d0edf65961a41")},
-        {31, newHashFromStr("0x000c6f6a7e9478859051e24eaaa0aec508583bc1fc262108804479be5c557d74")},
-        {47, newHashFromStr("0x001c6020b3d984739d307fa9f2adb897339449c23dbe78bb50fc365daf41b704")},
-        {63, newHashFromStr("0x00015b10a4a824ad4751c64d4027c82219f312c40f1aff2e9248355a8707347f")},
-        {79, newHashFromStr("0x00001f6f577a1f232a117a8f16f4efb93fc1407fbec156ac1fea7d621db84ed8")},
-        {89, newHashFromStr("0x0001f2ee3cafa3a390d5f8f368e1296b4fbf55719c10d170223df30b9836cf5b")},
-        {90, newHashFromStr("0x00023c2933e8069729e6d568038ea070f5c50a07145ca960e8e21a53e0640e26")},
-        {97, newHashFromStr("0x00046f205cad5e5085a939194e308d9569553d435f0fe1e3a13c99b0d34f76b1")},
-        {662, newHashFromStr("0x00021b08ddf59cd9d9e396ef46c6d57644b3aac7977d271c966f66b63df45dd1")},
-        {2000, newHashFromStr("0x000002bf997a02b3e403c8ce9a87699127864e344ed966b03be16e14e5662cf5")},
-        {9074, newHashFromStr("0x0000007e1d70d529752b87fe47f979ae5f8f27bbc987dd0c8b21c9c5a6f3099b")},
-        {12167, newHashFromStr("0x0000006fa4023de2a1d4bd712e7d7aafa15a273f6c78b32bd87185846e0cc903")},
-        {606942, newHashFromStr("0x0000000d7c7c25d0e2a8a8ff4013ae7154ba2d0c0217dc71b942f41af7be990a")},
-        {939796, newHashFromStr("0x0000040a3e7b559aea417d3f886c0e8fe69f1f0530800424b9ea739b1f2c8498")},
-	},
-
+//	Checkpoints: []Checkpoint{
+//        {1, newHashFromStr("001d498cbcd92d9b36fee933caf1551dd457bf710ec988e033faca697aff6a90")},
+//        {15, newHashFromStr("0013c1537f3c4984241c3c5b93d894dfef491eef0b82d87a5b7d0edf65961a41")},
+//        {31, newHashFromStr("000c6f6a7e9478859051e24eaaa0aec508583bc1fc262108804479be5c557d74")},
+//        {47, newHashFromStr("001c6020b3d984739d307fa9f2adb897339449c23dbe78bb50fc365daf41b704")},
+//        {63, newHashFromStr("00015b10a4a824ad4751c64d4027c82219f312c40f1aff2e9248355a8707347f")},
+//        {79, newHashFromStr("00001f6f577a1f232a117a8f16f4efb93fc1407fbec156ac1fea7d621db84ed8")},
+//        {89, newHashFromStr("0001f2ee3cafa3a390d5f8f368e1296b4fbf55719c10d170223df30b9836cf5b")},
+//        {90, newHashFromStr("00023c2933e8069729e6d568038ea070f5c50a07145ca960e8e21a53e0640e26")},
+//        {97, newHashFromStr("00046f205cad5e5085a939194e308d9569553d435f0fe1e3a13c99b0d34f76b1")},
+//        {662, newHashFromStr("00021b08ddf59cd9d9e396ef46c6d57644b3aac7977d271c966f66b63df45dd1")},
+//        {2000, newHashFromStr("000002bf997a02b3e403c8ce9a87699127864e344ed966b03be16e14e5662cf5")},
+//        {9074, newHashFromStr("0000007e1d70d529752b87fe47f979ae5f8f27bbc987dd0c8b21c9c5a6f3099b")},
+//        {12167, newHashFromStr("0000006fa4023de2a1d4bd712e7d7aafa15a273f6c78b32bd87185846e0cc903")},
+//        {606942, newHashFromStr("0000000d7c7c25d0e2a8a8ff4013ae7154ba2d0c0217dc71b942f41af7be990a")},
+//        {939796, newHashFromStr("0000040a3e7b559aea417d3f886c0e8fe69f1f0530800424b9ea739b1f2c8498")},
+//	},
+	Checkpoints: nil,
 	// Consensus rule change deployments.
 	//
 	// The miner confirmation window is defined as:
@@ -536,9 +535,7 @@ var TestNet3Params = Params{
 	GenerateSupported:        false,
 
 	// Checkpoints ordered from oldest to newest.
-	Checkpoints: []Checkpoint{
-		{0, newHashFromStr("00002a542f15e4f95e6256e5fc37532ad965e5874b4f5c4aaab75c792f184f63")},
-	},
+	Checkpoints: nil,
 
 	// Consensus rule change deployments.
 	//
