@@ -21,6 +21,7 @@ require (
 
 require (
 	github.com/aead/siphash v1.0.1 // indirect
+	github.com/bitweb-project/bitweb_yespower_go v0.0.0-20230402162027-9228f6e84d6f // indirect
 	github.com/decred/dcrd/crypto/blake256 v1.0.0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/kkdai/bstream v0.0.0-20161212061736-f391b8402d23 // indirect

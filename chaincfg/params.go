@@ -50,6 +50,7 @@ var (
 	//  1 03ad5e0edad18cb1f0fc0d28a3d4f1f3e445640337489abb10404f2d1e086be430
 	//  0359ef5021964fe22d6f8e05b2463c9540ce96883fe3b278760f048f5189f2e6c4 2
 	//  OP_CHECKMULTISIG
+
 	DefaultSignetChallenge, _ = hex.DecodeString(
 		"512103ad5e0edad18cb1f0fc0d28a3d4f1f3e445640337489abb10404f2d" +
 			"1e086be430210359ef5021964fe22d6f8e05b2463c9540ce9688" +
@@ -62,6 +63,7 @@ var (
 		{"seedsig.bitwebcore.net", false},
 	}
 )
+
 
 // Checkpoint identifies a known good point in the block chain.  Using
 // checkpoints allows a few optimizations for old blocks during initial download

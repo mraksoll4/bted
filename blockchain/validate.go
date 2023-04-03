@@ -664,19 +664,22 @@ func checkSerializedHeight(coinbaseTx *btcutil.Tx, wantHeight int32) error {
 func (b *BlockChain) checkBlockHeaderContext(header *wire.BlockHeader, prevNode *blockNode, flags BehaviorFlags) error {
 	fastAdd := flags&BFFastAdd == BFFastAdd
 	if !fastAdd {
-		// Ensure the difficulty specified in the block header matches
-		// the calculated difficulty based on the previous block and
-		// difficulty retarget rules.
-		expectedDifficulty, err := b.calcNextRequiredDifficulty(prevNode,
-			header.Timestamp)
-		if err != nil {
-			return err
-		}
-		blockDifficulty := header.Bits
-		if blockDifficulty != expectedDifficulty {
-			str := "block difficulty of %d is not the expected value of %d"
-			str = fmt.Sprintf(str, blockDifficulty, expectedDifficulty)
-			return ruleError(ErrUnexpectedDifficulty, str)
+		// Check difficulty only for blocks after height 100
+		if prevNode.height >= 100 {
+			// Ensure the difficulty specified in the block header matches
+			// the calculated difficulty based on the previous block and
+			// difficulty retarget rules.
+			expectedDifficulty, err := b.calcNextRequiredDifficulty(prevNode,
+				header.Timestamp)
+			if err != nil {
+				return err
+			}
+			blockDifficulty := header.Bits
+			if blockDifficulty != expectedDifficulty {
+				str := "block difficulty of %d is not the expected value of %d"
+				str = fmt.Sprintf(str, blockDifficulty, expectedDifficulty)
+				return ruleError(ErrUnexpectedDifficulty, str)
+			}
 		}
 
 		// Ensure the timestamp for the block header is after the

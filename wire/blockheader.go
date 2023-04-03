@@ -9,7 +9,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/mraksoll4/bitweb_yespower_go"
+	"github.com/bitweb-project/bitweb_yespower_go"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 )

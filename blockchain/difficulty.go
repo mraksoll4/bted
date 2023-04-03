@@ -5,6 +5,7 @@
 package blockchain
 
 import (
+	"math"
 	"math/big"
 	"time"
 
@@ -220,84 +221,123 @@ func (b *BlockChain) findPrevTestNetDifficulty(startNode *blockNode) uint32 {
 // while this function accepts any block node.
 func (b *BlockChain) calcNextRequiredDifficulty(lastNode *blockNode, newBlockTime time.Time) (uint32, error) {
 	// Genesis block.
-	if lastNode == nil {
-		return b.chainParams.PowLimitBits, nil
+	if lastNode.height > 90 {
+		return b.lwmaCalculateNextWorkRequired(lastNode, newBlockTime)
 	}
 
-	// Return the previous block's difficulty requirements if this block
-	// is not at a difficulty retarget interval.
 	if (lastNode.height+1)%b.blocksPerRetarget != 0 {
-		// For networks that support it, allow special reduction of the
-		// required difficulty once too much time has elapsed without
-		// mining a block.
-		if b.chainParams.ReduceMinDifficulty {
-			// Return minimum difficulty when more than the desired
-			// amount of time has elapsed without mining a block.
-			reductionTime := int64(b.chainParams.MinDiffReductionTime /
-				time.Second)
-			allowMinTime := lastNode.timestamp + reductionTime
-			if newBlockTime.Unix() > allowMinTime {
-				return b.chainParams.PowLimitBits, nil
-			}
-
-			// The block was mined within the desired timeframe, so
-			// return the difficulty for the last block which did
-			// not have the special minimum difficulty rule applied.
-			return b.findPrevTestNetDifficulty(lastNode), nil
-		}
-
-		// For the main network (or any unrecognized networks), simply
-		// return the previous block's difficulty requirements.
+		// Return the same difficulty
 		return lastNode.bits, nil
 	}
 
-	// Get the block node at the previous retarget (targetTimespan days
-	// worth of blocks).
-	firstNode := lastNode.RelativeAncestor(b.blocksPerRetarget - 1)
+	// Go back by what we want to be b.blocksPerRetarget worth of blocks
+	nHeightFirst := lastNode.height - (b.blocksPerRetarget - 1)
+	if nHeightFirst < 0 {
+		// If we don't have enough blocks, return the pow limit
+		return b.chainParams.PowLimitBits, nil
+	}
+
+	// Get the ancestor block at nHeightFirst
+	firstNode := lastNode.Ancestor(b.blocksPerRetarget - 1)
 	if firstNode == nil {
 		return 0, AssertError("unable to obtain previous retarget block")
 	}
 
-	// Limit the amount of adjustment that can occur to the previous
-	// difficulty.
-	actualTimespan := lastNode.timestamp - firstNode.timestamp
-	adjustedTimespan := actualTimespan
-	if actualTimespan < b.minRetargetTimespan {
-		adjustedTimespan = b.minRetargetTimespan
-	} else if actualTimespan > b.maxRetargetTimespan {
-		adjustedTimespan = b.maxRetargetTimespan
+	// Check if the previous block has the expected difficulty
+	if lastNode.bits != firstNode.bits {
+		// If not, return the difficulty of the previous block
+		return lastNode.bits, nil
 	}
 
-	// Calculate new target difficulty as:
-	//  currentDifficulty * (adjustedTimespan / targetTimespan)
-	// The result uses integer division which means it will be slightly
-	// rounded down.  Bitcoind also uses integer division to calculate this
-	// result.
+	// Calculate the actual and adjusted time spans
+	firstTime := time.Unix(firstNode.timestamp, 0)
+	lastTime := time.Unix(lastNode.timestamp, 0)
+	actualTimespan := lastTime.Sub(firstTime)
+	
+	// Clamp the actual time passed within the retarget window to the max and
+	// min retarget timespan values.
+	adjustedTimespan := float64(actualTimespan)
+	if adjustedTimespan < float64(b.minRetargetTimespan)*float64(time.Second) {
+		adjustedTimespan = float64(b.minRetargetTimespan) * float64(time.Second)
+	} else if adjustedTimespan > float64(b.maxRetargetTimespan)*float64(time.Second) {
+		adjustedTimespan = float64(b.maxRetargetTimespan) * float64(time.Second)
+	}
+	
+	// Calculate the new target difficulty value based on the previous
+	// target and the amount of time elapsed in the current retarget
+	// interval.
 	oldTarget := CompactToBig(lastNode.bits)
-	newTarget := new(big.Int).Mul(oldTarget, big.NewInt(adjustedTimespan))
-	targetTimeSpan := int64(b.chainParams.TargetTimespan / time.Second)
+	newTarget := new(big.Int).Mul(oldTarget, big.NewInt(int64(adjustedTimespan)))
+	targetTimeSpan := int64(b.chainParams.TargetTimePerBlock.Seconds()) * int64(b.blocksPerRetarget)
 	newTarget.Div(newTarget, big.NewInt(targetTimeSpan))
-
-	// Limit new value to the proof of work limit.
+	
 	if newTarget.Cmp(b.chainParams.PowLimit) > 0 {
 		newTarget.Set(b.chainParams.PowLimit)
 	}
-
-	// Log new target difficulty and return it.  The new target logging is
-	// intentionally converting the bits back to a number instead of using
-	// newTarget since conversion to the compact representation loses
-	// precision.
 	newTargetBits := BigToCompact(newTarget)
+	
+	// Log debug information about the new target.
 	log.Debugf("Difficulty retarget at block height %d", lastNode.height+1)
 	log.Debugf("Old target %08x (%064x)", lastNode.bits, oldTarget)
 	log.Debugf("New target %08x (%064x)", newTargetBits, CompactToBig(newTargetBits))
 	log.Debugf("Actual timespan %v, adjusted timespan %v, target timespan %v",
-		time.Duration(actualTimespan)*time.Second,
-		time.Duration(adjustedTimespan)*time.Second,
+		actualTimespan,
+		time.Duration(int64(adjustedTimespan)),
 		b.chainParams.TargetTimespan)
-
+	
 	return newTargetBits, nil
 }
+
+
+func (b *BlockChain) lwmaCalculateNextWorkRequired(lastNode *blockNode, newBlockTime time.Time) (uint32, error) {
+    const (
+        N = 90
+        T = float64(time.Second * 60)
+        k = float64(N * (N + 1)) / 2 * T
+    )
+
+    height := lastNode.height
+    if height <= N {
+        log.Debugf("Block height %d is less than or equal to N, returning PowLimitBits", height)
+        return b.chainParams.PowLimitBits, nil
+    }
+
+    log.Debugf("Calculating next work required for block at height %d", height)
+
+    var sumTarget big.Int
+    var t, j float64
+
+    // Loop through N most recent blocks.
+    for i := (height - N + 1); i <= height; i++ {
+        block := lastNode.Ancestor(i)
+        blockPrev := block.Ancestor(i - 1)
+        solvetime := float64(block.timestamp - blockPrev.CalcPastMedianTime().Unix())
+        solvetime = math.Max(-6*T, math.Min(solvetime, 6*T))
+        j++
+        t += solvetime * j // Weighted solvetime sum.
+        target := CompactToBig(block.bits)
+        sumTarget.Add(&sumTarget, new(big.Int).Div(target, big.NewInt(int64(k*N))))
+
+        log.Debugf("Block #%d: solvetime=%f, target=%v", block.height, solvetime, target)
+    }
+
+    // Keep t reasonable to >= 1/10 of expected t.
+    if t < k/10 {
+        t = k / 10
+    }
+
+    nextTarget := new(big.Int).Mul(big.NewInt(int64(t)), &sumTarget)
+    powLimit := CompactToBig(b.chainParams.PowLimitBits)
+    if nextTarget.Cmp(powLimit) > 0 {
+        nextTarget.Set(powLimit)
+    }
+
+    return BigToCompact(nextTarget), nil
+}
+
+
+
+
 
 // CalcNextRequiredDifficulty calculates the required difficulty for the block
 // after the end of the current best chain based on the difficulty retarget
