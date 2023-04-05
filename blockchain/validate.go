@@ -665,7 +665,7 @@ func (b *BlockChain) checkBlockHeaderContext(header *wire.BlockHeader, prevNode 
 	fastAdd := flags&BFFastAdd == BFFastAdd
 	if !fastAdd {
 		// Check difficulty only for blocks after height 100
-		if prevNode.height >= 100 {
+		if prevNode.height > 90 {
 			// Ensure the difficulty specified in the block header matches
 			// the calculated difficulty based on the previous block and
 			// difficulty retarget rules.
@@ -674,7 +674,11 @@ func (b *BlockChain) checkBlockHeaderContext(header *wire.BlockHeader, prevNode 
 			if err != nil {
 				return err
 			}
+
 			blockDifficulty := header.Bits
+
+			log.Debugf("checkBlockHeaderContext: block height=%d, timestamp=%v, bits=%d, current difficulty=%d, expected difficulty=%d", prevNode.height+1, header.Timestamp, blockDifficulty, blockDifficulty, expectedDifficulty)
+
 			if blockDifficulty != expectedDifficulty {
 				str := "block difficulty of %d is not the expected value of %d"
 				str = fmt.Sprintf(str, blockDifficulty, expectedDifficulty)

@@ -310,12 +310,13 @@ func (b *BlockChain) lwmaCalculateNextWorkRequired(lastNode *blockNode, newBlock
 
 		solvetime = blockNode.timestamp - blockNodePrev.timestamp
 		solvetime = int64(math.Max(float64(-6*T), math.Min(float64(solvetime), float64(6*T))))
-
+		log.Debugf("lwmaCalculateNextWorkRequired: block height=%d, solvetime=%d", blockNode.height, solvetime)
 		j++
 		t += solvetime * j
 		target := CompactToBig(blockNode.bits)
 		sumTarget.Add(sumTarget, target.Div(target, big.NewInt(int64(k*N))))
-		log.Debugf("lwmaCalculateNextWorkRequired: block height=%d, solvetime=%d, target=%d, sumTarget=%d", blockNode.height, solvetime, target, sumTarget)
+		log.Debugf("lwmaCalculateNextWorkRequired: block height=%d, target=%d, sumTarget=%d", blockNode.height, target, sumTarget)
+
 	}
 
 	// Calculate the next target using the LWMA formula
