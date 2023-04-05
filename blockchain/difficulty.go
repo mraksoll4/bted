@@ -290,53 +290,49 @@ func (b *BlockChain) calcNextRequiredDifficulty(lastNode *blockNode, newBlockTim
 
 
 func (b *BlockChain) lwmaCalculateNextWorkRequired(lastNode *blockNode, newBlockTime time.Time) (uint32, error) {
-    const (
-        N = 90
-        T = float64(time.Second * 60)
-        k = float64(N * (N + 1)) / 2 * T
-    )
+	const T int64 = 60
+	const N int64 = 90
+	const k int64 = N * (N + 1) * T / 2
+	height := int64(lastNode.height)
+	if height <= N {
+		log.Debugf("lwmaCalculateNextWorkRequired: block height %d must be greater than %d", height, N)
+		return 0, nil
+	}
 
-    height := lastNode.height
-    if height <= N {
-        log.Debugf("Block height %d is less than or equal to N, returning PowLimitBits", height)
-        return b.chainParams.PowLimitBits, nil
-    }
+	sumTarget := big.NewInt(0)
+	t := int64(0)
+	j := int64(0)
+	solvetime := int64(0)
 
-    log.Debugf("Calculating next work required for block at height %d", height)
+	for i := height - N + 1; i <= height; i++ {
+		blockNode := lastNode.Ancestor(int32(i))
+		blockNodePrev := blockNode.Ancestor(int32(i - 1))
 
-    var sumTarget big.Int
-    var t, j float64
+		solvetime = blockNode.timestamp - blockNodePrev.timestamp
+		solvetime = int64(math.Max(float64(-6*T), math.Min(float64(solvetime), float64(6*T))))
 
-    // Loop through N most recent blocks.
-    for i := (height - N + 1); i <= height; i++ {
-        block := lastNode.Ancestor(i)
-        blockPrev := block.Ancestor(i - 1)
-        solvetime := float64(block.timestamp - blockPrev.CalcPastMedianTime().Unix())
-        solvetime = math.Max(-6*T, math.Min(solvetime, 6*T))
-        j++
-        t += solvetime * j // Weighted solvetime sum.
-        target := CompactToBig(block.bits)
-        sumTarget.Add(&sumTarget, new(big.Int).Div(target, big.NewInt(int64(k*N))))
+		j++
+		t += solvetime * j
+		target := CompactToBig(blockNode.bits)
+		sumTarget.Add(sumTarget, target.Div(target, big.NewInt(int64(k*N))))
+		log.Debugf("lwmaCalculateNextWorkRequired: block height=%d, solvetime=%d, target=%d, sumTarget=%d", blockNode.height, solvetime, target, sumTarget)
+	}
 
-        log.Debugf("Block #%d: solvetime=%f, target=%v", block.height, solvetime, target)
-    }
+	// Calculate the next target using the LWMA formula
+	if t < k/10 {
+		t = k/10
+	}
+	nextTarget := new(big.Int).Mul(big.NewInt(t), sumTarget)
+	log.Debugf("lwmaCalculateNextWorkRequired: t=%d, sumTarget=%d, nextTarget=%d", t, sumTarget, nextTarget)
 
-    // Keep t reasonable to >= 1/10 of expected t.
-    if t < k/10 {
-        t = k / 10
-    }
+	// Set the next target to the maximum difficulty if it exceeds it
+	if nextTarget.Cmp(b.chainParams.PowLimit) > 0 {
+		nextTarget = b.chainParams.PowLimit
+	}
 
-    nextTarget := new(big.Int).Mul(big.NewInt(int64(t)), &sumTarget)
-    powLimit := CompactToBig(b.chainParams.PowLimitBits)
-    if nextTarget.Cmp(powLimit) > 0 {
-        nextTarget.Set(powLimit)
-    }
-
-    return BigToCompact(nextTarget), nil
+	log.Debugf("lwmaCalculateNextWorkRequired: height=%d, target=%d", height+1, BigToCompact(nextTarget))
+	return BigToCompact(nextTarget), nil
 }
-
-
-
 
 
 // CalcNextRequiredDifficulty calculates the required difficulty for the block
