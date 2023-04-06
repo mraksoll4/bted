@@ -2,7 +2,7 @@
 *~
 
 # Databases
-btcd.db
+bted.db
 *-shm
 *-wal
 
@@ -38,5 +38,5 @@ profile.tmp
 profile.cov
 coverage.txt
 btcec/coverage.txt
-btcutil/coverage.txt
-btcutil/psbt/coverage.txt
+bteutil/coverage.txt
+bteutil/psbt/coverage.txt

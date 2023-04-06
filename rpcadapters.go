@@ -13,7 +13,7 @@ import (
 	"github.com/mraksoll4/bted/netsync"
 	"github.com/mraksoll4/bted/peer"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // rpcPeer provides a peer for use with the RPC server and implements the
@@ -256,7 +256,7 @@ func (b *rpcSyncMgr) IsCurrent() bool {
 //
 // This function is safe for concurrent access and is part of the
 // rpcserverSyncManager interface implementation.
-func (b *rpcSyncMgr) SubmitBlock(block *btcutil.Block, flags blockchain.BehaviorFlags) (bool, error) {
+func (b *rpcSyncMgr) SubmitBlock(block *bteutil.Block, flags blockchain.BehaviorFlags) (bool, error) {
 	return b.syncMgr.ProcessBlock(block, flags)
 }
 

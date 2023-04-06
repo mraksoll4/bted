@@ -11,7 +11,7 @@ import (
 	"github.com/mraksoll4/bted/blockchain"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // newHashFromStr converts the passed big-endian hex string into a
@@ -49,7 +49,7 @@ func newUtxoViewpoint(sourceTxns []*wire.MsgTx, sourceTxHeights []int32) *blockc
 
 	view := blockchain.NewUtxoViewpoint()
 	for i, tx := range sourceTxns {
-		view.AddTxOuts(btcutil.NewTx(tx), sourceTxHeights[i])
+		view.AddTxOuts(bteutil.NewTx(tx), sourceTxHeights[i])
 	}
 	return view
 }

@@ -14,7 +14,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/txscript"
 	"github.com/mraksoll4/bted/wire"
 )
@@ -125,7 +125,7 @@ func (u *Updater) addPartialSignature(inIndex int, sig []byte,
 		if pInput.RedeemScript != nil {
 			outIndex := u.Upsbt.UnsignedTx.TxIn[inIndex].PreviousOutPoint.Index
 			scriptPubKey := pInput.NonWitnessUtxo.TxOut[outIndex].PkScript
-			scriptHash := btcutil.Hash160(pInput.RedeemScript)
+			scriptHash := bteutil.Hash160(pInput.RedeemScript)
 
 			scriptHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_HASH160).
@@ -155,7 +155,7 @@ func (u *Updater) addPartialSignature(inIndex int, sig []byte,
 
 		var script []byte
 		if pInput.RedeemScript != nil {
-			scriptHash := btcutil.Hash160(pInput.RedeemScript)
+			scriptHash := bteutil.Hash160(pInput.RedeemScript)
 			scriptHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_HASH160).
 				AddData(scriptHash).
@@ -195,7 +195,7 @@ func (u *Updater) addPartialSignature(inIndex int, sig []byte,
 			}
 		} else {
 			// Otherwise, this is a p2wkh input.
-			pubkeyHash := btcutil.Hash160(pubkey)
+			pubkeyHash := bteutil.Hash160(pubkey)
 			pubkeyHashScript, err := txscript.NewScriptBuilder().
 				AddOp(txscript.OP_0).
 				AddData(pubkeyHash).

@@ -7,7 +7,7 @@ package mining
 import (
 	"github.com/mraksoll4/bted/blockchain"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 const (
@@ -44,7 +44,7 @@ type Policy struct {
 	// TxMinFreeFee is the minimum fee in Satoshi/1000 bytes that is
 	// required for a transaction to be treated as free for mining purposes
 	// (block template generation).
-	TxMinFreeFee btcutil.Amount
+	TxMinFreeFee bteutil.Amount
 }
 
 // minInt is a helper function to return the minimum of two ints.  This avoids

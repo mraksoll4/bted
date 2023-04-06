@@ -12,7 +12,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // AddMultisigAddressCmd defines the addmutisigaddress JSON-RPC command.
@@ -1015,7 +1015,7 @@ type PsbtOutput map[string]interface{}
 
 // NewPsbtOutput returns a new instance of a PSBT output to use with the
 // WalletCreateFundedPsbtCmd command.
-func NewPsbtOutput(address string, amount btcutil.Amount) PsbtOutput {
+func NewPsbtOutput(address string, amount bteutil.Amount) PsbtOutput {
 	return PsbtOutput{address: amount.ToBTC()}
 }
 

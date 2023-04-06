@@ -8,7 +8,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/mraksoll4/bted/btcutil/bech32"
+	"github.com/mraksoll4/bted/bteutil/bech32"
 )
 
 // This example demonstrates how to decode a bech32 encoded string.

@@ -7,7 +7,7 @@ package base58_test
 import (
 	"fmt"
 
-	"github.com/mraksoll4/bted/btcutil/base58"
+	"github.com/mraksoll4/bted/bteutil/base58"
 )
 
 // This example demonstrates how to decode modified base58 encoded data.

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/txscript"
 	"github.com/mraksoll4/bted/wire"
@@ -1425,7 +1425,7 @@ func TestWitnessForNonWitnessUtxo(t *testing.T) {
 			}},
 			TxOut: []*wire.TxOut{{
 				PkScript: outPkScript,
-				Value:    1.9 * btcutil.SatoshiPerBitcoin,
+				Value:    1.9 * bteutil.SatoshiPerBitcoin,
 			}},
 		},
 		Inputs:  []PInput{{}},

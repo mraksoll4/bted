@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/wire"
 )
@@ -357,7 +357,7 @@ func testScripts(t *testing.T, tests [][]interface{}, useSigCache bool) {
 
 		var (
 			witness  wire.TxWitness
-			inputAmt btcutil.Amount
+			inputAmt bteutil.Amount
 		)
 
 		// When the first field of the test data is a slice it contains
@@ -377,7 +377,7 @@ func testScripts(t *testing.T, tests [][]interface{}, useSigCache bool) {
 				continue
 			}
 
-			inputAmt, err = btcutil.NewAmount(witnessData[len(witnessData)-1].(float64))
+			inputAmt, err = bteutil.NewAmount(witnessData[len(witnessData)-1].(float64))
 			if err != nil {
 				t.Errorf("%s: can't parse input amt: %v",
 					name, err)
@@ -561,7 +561,7 @@ testloop:
 			continue
 		}
 
-		tx, err := btcutil.NewTxFromBytes(serializedTx)
+		tx, err := bteutil.NewTxFromBytes(serializedTx)
 		if err != nil {
 			t.Errorf("bad test (arg 2 not msgtx %v) %d: %v", err,
 				i, test)
@@ -718,7 +718,7 @@ testloop:
 			continue
 		}
 
-		tx, err := btcutil.NewTxFromBytes(serializedTx)
+		tx, err := bteutil.NewTxFromBytes(serializedTx)
 		if err != nil {
 			t.Errorf("bad test (arg 2 not msgtx %v) %d: %v", err,
 				i, test)
@@ -916,7 +916,7 @@ func executeTaprootRefTest(t *testing.T, testCase taprootJsonTest) {
 	if err != nil {
 		t.Fatalf("unable to decode hex: %v", err)
 	}
-	tx, err := btcutil.NewTxFromBytes(txHex)
+	tx, err := bteutil.NewTxFromBytes(txHex)
 	if err != nil {
 		t.Fatalf("unable to decode hex: %v", err)
 	}

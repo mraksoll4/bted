@@ -5,7 +5,7 @@
 # Use of this source code is governed by an ISC
 # license that can be found in the LICENSE file.
 
-# Simple bash script to build basic btcd tools for all the platforms we support
+# Simple bash script to build basic bted tools for all the platforms we support
 # with the golang cross-compiler.
 
 set -e
@@ -22,7 +22,7 @@ fi
 go mod vendor
 tar -cvzf vendor.tar.gz vendor
 
-PACKAGE=btcd
+PACKAGE=bted
 MAINDIR=$PACKAGE-$TAG
 mkdir -p $MAINDIR
 

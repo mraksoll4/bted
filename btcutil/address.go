@@ -2,7 +2,7 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package btcutil
+package bteutil
 
 import (
 	"bytes"
@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcutil/base58"
-	"github.com/mraksoll4/bted/btcutil/bech32"
+	"github.com/mraksoll4/bted/bteutil/base58"
+	"github.com/mraksoll4/bted/bteutil/bech32"
 	"github.com/mraksoll4/bted/chaincfg"
 	"golang.org/x/crypto/ripemd160"
 )

@@ -14,7 +14,7 @@ import (
 	"github.com/mraksoll4/bted/chaincfg"
 	"github.com/mraksoll4/bted/database"
 	"github.com/mraksoll4/bted/database/ffldb"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // dbType is the database type name for this driver.
@@ -170,7 +170,7 @@ func TestPersistence(t *testing.T) {
 		"b1key2": "foo2",
 		"b1key3": "foo3",
 	}
-	genesisBlock := btcutil.NewBlock(chaincfg.MainNetParams.GenesisBlock)
+	genesisBlock := bteutil.NewBlock(chaincfg.MainNetParams.GenesisBlock)
 	genesisHash := chaincfg.MainNetParams.GenesisHash
 	err = db.Update(func(tx database.Tx) error {
 		metadataBucket := tx.Metadata()

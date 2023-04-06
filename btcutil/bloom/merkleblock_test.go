@@ -11,8 +11,8 @@ import (
 
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
-	"github.com/mraksoll4/bted/btcutil/bloom"
+	"github.com/mraksoll4/bted/bteutil"
+	"github.com/mraksoll4/bted/bteutil/bloom"
 )
 
 func TestMerkleBlock3(t *testing.T) {
@@ -29,7 +29,7 @@ func TestMerkleBlock3(t *testing.T) {
 		t.Errorf("TestMerkleBlock3 DecodeString failed: %v", err)
 		return
 	}
-	blk, err := btcutil.NewBlockFromBytes(blockBytes)
+	blk, err := bteutil.NewBlockFromBytes(blockBytes)
 	if err != nil {
 		t.Errorf("TestMerkleBlock3 NewBlockFromBytes failed: %v", err)
 		return

@@ -2,14 +2,14 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package btcutil
+package bteutil
 
 import (
 	"bytes"
 	"errors"
 
 	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcutil/base58"
+	"github.com/mraksoll4/bted/bteutil/base58"
 	"github.com/mraksoll4/bted/chaincfg"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 )

@@ -7,7 +7,7 @@ import (
 
 	"github.com/mraksoll4/bted/btcec/v2"
 	"github.com/mraksoll4/bted/btcec/v2/ecdsa"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/chaincfg"
 	"github.com/mraksoll4/bted/wire"
 	"golang.org/x/crypto/ripemd160"
@@ -149,7 +149,7 @@ func (s PkScript) Script() []byte {
 }
 
 // Address encodes the script into an address for the given chain.
-func (s PkScript) Address(chainParams *chaincfg.Params) (btcutil.Address, error) {
+func (s PkScript) Address(chainParams *chaincfg.Params) (bteutil.Address, error) {
 	_, addrs, _, err := ExtractPkScriptAddrs(s.Script(), chainParams)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse address: %v", err)

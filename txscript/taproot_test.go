@@ -14,8 +14,8 @@ import (
 
 	"github.com/mraksoll4/bted/btcec/v2"
 	"github.com/mraksoll4/bted/btcec/v2/schnorr"
-	"github.com/mraksoll4/bted/btcutil"
-	"github.com/mraksoll4/bted/btcutil/hdkeychain"
+	"github.com/mraksoll4/bted/bteutil"
+	"github.com/mraksoll4/bted/bteutil/hdkeychain"
 	"github.com/mraksoll4/bted/chaincfg"
 	secp "github.com/decred/dcrd/dcrec/secp256k1/v4"
 	"github.com/stretchr/testify/require"
@@ -255,7 +255,7 @@ func TestTaprootConstructKeyPath(t *testing.T) {
 
 			tapKey := ComputeTaprootKeyNoScript(pubKey)
 
-			addr, err := btcutil.NewAddressTaproot(
+			addr, err := bteutil.NewAddressTaproot(
 				schnorr.SerializePubKey(tapKey),
 				&chaincfg.MainNetParams,
 			)

@@ -33,7 +33,7 @@ type opcode struct {
 	opfunc func(*opcode, []byte, *Engine) error
 }
 
-// These constants are the values of the official opcodes used on the btc wiki,
+// These constants are the values of the official opcodes used on the bte wiki,
 // in bitcoin core and in most if not all other references and software related
 // to handling BTC scripts.
 const (

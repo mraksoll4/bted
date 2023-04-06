@@ -11,7 +11,7 @@ import (
 	"github.com/mraksoll4/bted/mempool"
 	"github.com/mraksoll4/bted/peer"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // PeerNotifier exposes methods to notify peers of status changes to
@@ -24,7 +24,7 @@ type PeerNotifier interface {
 
 	RelayInventory(invVect *wire.InvVect, data interface{})
 
-	TransactionConfirmed(tx *btcutil.Tx)
+	TransactionConfirmed(tx *bteutil.Tx)
 }
 
 // Config is a configuration struct used to initialize a new SyncManager.

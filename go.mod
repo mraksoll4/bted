@@ -31,7 +31,7 @@ require (
 
 replace github.com/mraksoll4/bted/bteutil => ./bteutil
 
-// The retract statements below fixes an accidental push of the tags of a btcd
+// The retract statements below fixes an accidental push of the tags of a bted
 // fork.
 retract (
 	v0.18.1

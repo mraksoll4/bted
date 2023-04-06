@@ -1,21 +1,21 @@
-package btcutil_test
+package bteutil_test
 
 import (
 	"fmt"
 	"math"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 func ExampleAmount() {
 
-	a := btcutil.Amount(0)
+	a := bteutil.Amount(0)
 	fmt.Println("Zero Satoshi:", a)
 
-	a = btcutil.Amount(1e8)
+	a = bteutil.Amount(1e8)
 	fmt.Println("100,000,000 Satoshis:", a)
 
-	a = btcutil.Amount(1e5)
+	a = bteutil.Amount(1e5)
 	fmt.Println("100,000 Satoshis:", a)
 	// Output:
 	// Zero Satoshi: 0 BTC
@@ -24,28 +24,28 @@ func ExampleAmount() {
 }
 
 func ExampleNewAmount() {
-	amountOne, err := btcutil.NewAmount(1)
+	amountOne, err := bteutil.NewAmount(1)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountOne) //Output 1
 
-	amountFraction, err := btcutil.NewAmount(0.01234567)
+	amountFraction, err := bteutil.NewAmount(0.01234567)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountFraction) //Output 2
 
-	amountZero, err := btcutil.NewAmount(0)
+	amountZero, err := bteutil.NewAmount(0)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountZero) //Output 3
 
-	amountNaN, err := btcutil.NewAmount(math.NaN())
+	amountNaN, err := bteutil.NewAmount(math.NaN())
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -59,13 +59,13 @@ func ExampleNewAmount() {
 }
 
 func ExampleAmount_unitConversions() {
-	amount := btcutil.Amount(44433322211100)
+	amount := bteutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBTC:", amount.Format(btcutil.AmountKiloBTC))
+	fmt.Println("Satoshi to kBTC:", amount.Format(bteutil.AmountKiloBTC))
 	fmt.Println("Satoshi to BTC:", amount)
-	fmt.Println("Satoshi to MilliBTC:", amount.Format(btcutil.AmountMilliBTC))
-	fmt.Println("Satoshi to MicroBTC:", amount.Format(btcutil.AmountMicroBTC))
-	fmt.Println("Satoshi to Satoshi:", amount.Format(btcutil.AmountSatoshi))
+	fmt.Println("Satoshi to MilliBTC:", amount.Format(bteutil.AmountMilliBTC))
+	fmt.Println("Satoshi to MicroBTC:", amount.Format(bteutil.AmountMicroBTC))
+	fmt.Println("Satoshi to Satoshi:", amount.Format(bteutil.AmountSatoshi))
 
 	// Output:
 	// Satoshi to kBTC: 444.333222111 kBTC

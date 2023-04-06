@@ -114,7 +114,7 @@ const (
 	// 0.19.0.
 	BitcoindPost19
 
-	// Btcd represents a catch-all btcd version.
+	// Btcd represents a catch-all bted version.
 	Btcd
 )
 
@@ -1502,7 +1502,7 @@ func New(config *ConnConfig, ntfnHandlers *NotificationHandlers) (*Client, error
 // Batch is a factory that creates a client able to interact with the server using
 // JSON-RPC 2.0. The client is capable of accepting an arbitrary number of requests
 // and having the server process the all at the same time. It's compatible with both
-// btcd and bitcoind
+// bted and bitcoind
 func NewBatch(config *ConnConfig) (*Client, error) {
 	if !config.HTTPPostMode {
 		return nil, errors.New("http post mode is required to use batch client")
@@ -1616,13 +1616,13 @@ func (c *Client) BackendVersion() (BackendVersion, error) {
 
 	// We'll start by calling GetInfo. This method doesn't exist for
 	// bitcoind nodes as of v0.16.0, so we'll assume the client is connected
-	// to a btcd backend if it does exist.
+	// to a bted backend if it does exist.
 	info, err := c.GetInfo()
 
 	switch err := err.(type) {
-	// Parse the btcd version and cache it.
+	// Parse the bted version and cache it.
 	case nil:
-		log.Debugf("Detected btcd version: %v", info.Version)
+		log.Debugf("Detected bted version: %v", info.Version)
 		version := Btcd
 		c.backendVersion = &version
 		return *c.backendVersion, nil
@@ -1631,12 +1631,12 @@ func (c *Client) BackendVersion() (BackendVersion, error) {
 	// we actually ran into an error.
 	case *btcjson.RPCError:
 		if err.Code != btcjson.ErrRPCMethodNotFound.Code {
-			return 0, fmt.Errorf("unable to detect btcd version: "+
+			return 0, fmt.Errorf("unable to detect bted version: "+
 				"%v", err)
 		}
 
 	default:
-		return 0, fmt.Errorf("unable to detect btcd version: %v", err)
+		return 0, fmt.Errorf("unable to detect bted version: %v", err)
 	}
 
 	// Since the GetInfo method was not found, we assume the client is

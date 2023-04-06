@@ -16,7 +16,7 @@ import (
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/database"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 var zeroHash = chainhash.Hash{}
@@ -94,7 +94,7 @@ func (bi *blockImporter) readBlock() ([]byte, error) {
 // with any potential errors.
 func (bi *blockImporter) processBlock(serializedBlock []byte) (bool, error) {
 	// Deserialize the block which includes checks for malformed blocks.
-	block, err := btcutil.NewBlockFromBytes(serializedBlock)
+	block, err := bteutil.NewBlockFromBytes(serializedBlock)
 	if err != nil {
 		return false, err
 	}

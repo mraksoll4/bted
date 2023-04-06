@@ -11,7 +11,7 @@ import (
 
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil/bloom"
+	"github.com/mraksoll4/bted/bteutil/bloom"
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

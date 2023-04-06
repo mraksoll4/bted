@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/chaincfg"
 	"github.com/mraksoll4/bted/database"
 	_ "github.com/mraksoll4/bted/database/ffldb"
@@ -142,7 +142,7 @@ func Example_blockStorageAndRetrieval() {
 	// and example.
 	err = db.Update(func(tx database.Tx) error {
 		genesisBlock := chaincfg.MainNetParams.GenesisBlock
-		return tx.StoreBlock(btcutil.NewBlock(genesisBlock))
+		return tx.StoreBlock(bteutil.NewBlock(genesisBlock))
 	})
 	if err != nil {
 		fmt.Println(err)

@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/mraksoll4/bted/btcjson"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/davecgh/go-spew/spew"
 )
@@ -142,8 +142,8 @@ func TestGetTxOutSetInfoResult(t *testing.T) {
 					return *h
 				}(),
 				DiskSize: 1,
-				TotalAmount: func() btcutil.Amount {
-					a, err := btcutil.NewAmount(0.2)
+				TotalAmount: func() bteutil.Amount {
+					a, err := bteutil.NewAmount(0.2)
 					if err != nil {
 						panic(err)
 					}

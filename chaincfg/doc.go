@@ -25,7 +25,7 @@
 //          "fmt"
 //          "log"
 //
-//          "github.com/mraksoll4/bted/btcutil"
+//          "github.com/mraksoll4/bted/bteutil"
 //          "github.com/mraksoll4/bted/chaincfg"
 //  )
 //
@@ -46,7 +46,7 @@
 //
 //          // Create and print new payment address, specific to the active network.
 //          pubKeyHash := make([]byte, 20)
-//          addr, err := btcutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
+//          addr, err := bteutil.NewAddressPubKeyHash(pubKeyHash, chainParams)
 //          if err != nil {
 //                  log.Fatal(err)
 //          }

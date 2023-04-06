@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/mraksoll4/bted/btcjson"
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 )
 
 // TestWalletSvrCmds tests all of the wallet server commands marshal and
@@ -1764,7 +1764,7 @@ func TestWalletSvrCmds(t *testing.T) {
 						},
 					},
 					[]btcjson.PsbtOutput{
-						btcjson.NewPsbtOutput("1234", btcutil.Amount(1234)),
+						btcjson.NewPsbtOutput("1234", bteutil.Amount(1234)),
 						btcjson.NewPsbtDataOutput([]byte{1, 2, 3, 4}),
 					},
 					btcjson.Uint32(1),
@@ -1782,7 +1782,7 @@ func TestWalletSvrCmds(t *testing.T) {
 						},
 					},
 					[]btcjson.PsbtOutput{
-						btcjson.NewPsbtOutput("1234", btcutil.Amount(1234)),
+						btcjson.NewPsbtOutput("1234", bteutil.Amount(1234)),
 						btcjson.NewPsbtDataOutput([]byte{1, 2, 3, 4}),
 					},
 					btcjson.Uint32(1),
@@ -1800,7 +1800,7 @@ func TestWalletSvrCmds(t *testing.T) {
 					},
 				},
 				Outputs: []btcjson.PsbtOutput{
-					btcjson.NewPsbtOutput("1234", btcutil.Amount(1234)),
+					btcjson.NewPsbtOutput("1234", bteutil.Amount(1234)),
 					btcjson.NewPsbtDataOutput([]byte{1, 2, 3, 4}),
 				},
 				Locktime:    btcjson.Uint32(1),

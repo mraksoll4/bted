@@ -2,13 +2,13 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package btcutil_test
+package bteutil_test
 
 import (
 	"math"
 	"testing"
 
-	. "github.com/mraksoll4/bted/btcutil"
+	. "github.com/mraksoll4/bted/bteutil"
 )
 
 func TestAmountCreation(t *testing.T) {

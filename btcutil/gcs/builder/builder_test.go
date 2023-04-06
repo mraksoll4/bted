@@ -9,9 +9,9 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcutil"
-	"github.com/mraksoll4/bted/btcutil/gcs"
-	"github.com/mraksoll4/bted/btcutil/gcs/builder"
+	"github.com/mraksoll4/bted/bteutil"
+	"github.com/mraksoll4/bted/bteutil/gcs"
+	"github.com/mraksoll4/bted/bteutil/gcs/builder"
 	"github.com/mraksoll4/bted/chaincfg"
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/txscript"
@@ -76,8 +76,8 @@ func TestUseBlockHash(t *testing.T) {
 		Index: 4321,
 	}
 
-	// btcutil.Address
-	addr, err := btcutil.DecodeAddress(testAddr, &chaincfg.MainNetParams)
+	// bteutil.Address
+	addr, err := bteutil.DecodeAddress(testAddr, &chaincfg.MainNetParams)
 	if err != nil {
 		t.Fatalf("Address decode failed: %s", err.Error())
 	}

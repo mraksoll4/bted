@@ -13,7 +13,7 @@ import (
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 	"github.com/mraksoll4/bted/txscript"
 	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/btcutil/gcs"
+	"github.com/mraksoll4/bted/bteutil/gcs"
 )
 
 const (

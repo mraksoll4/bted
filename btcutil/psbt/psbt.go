@@ -13,7 +13,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/bteutil"
 	"github.com/mraksoll4/bted/wire"
 )
 
@@ -402,7 +402,7 @@ func (p *Packet) SanityCheck() error {
 
 // GetTxFee returns the transaction fee.  An error is returned if a transaction
 // input does not contain any UTXO information.
-func (p *Packet) GetTxFee() (btcutil.Amount, error) {
+func (p *Packet) GetTxFee() (bteutil.Amount, error) {
 	sumInputs, err := SumUtxoInputValues(p)
 	if err != nil {
 		return 0, err
@@ -414,5 +414,5 @@ func (p *Packet) GetTxFee() (btcutil.Amount, error) {
 	}
 
 	fee := sumInputs - sumOutputs
-	return btcutil.Amount(fee), nil
+	return bteutil.Amount(fee), nil
 }
