@@ -91,8 +91,8 @@ var ErrInvalidHandshake = fmt.Errorf("invalid message during handshake")
 // and may therefore contain additional or fewer fields than those which
 // are used directly in the protocol encoded message.
 type Message interface {
-	BtcDecode(io.Reader, uint32, MessageEncoding) error
-	BtcEncode(io.Writer, uint32, MessageEncoding) error
+	BteDecode(io.Reader, uint32, MessageEncoding) error
+	BteEncode(io.Writer, uint32, MessageEncoding) error
 	Command() string
 	MaxPayloadLength(uint32) uint32
 }
@@ -292,7 +292,7 @@ func WriteMessageWithEncodingN(w io.Writer, msg Message, pver uint32,
 
 	// Encode the message payload.
 	var bw bytes.Buffer
-	err := msg.BtcEncode(&bw, pver, encoding)
+	err := msg.BteEncode(&bw, pver, encoding)
 	if err != nil {
 		return totalBytes, err
 	}
@@ -425,9 +425,9 @@ func ReadMessageWithEncodingN(r io.Reader, pver uint32, btcnet BitcoinNet,
 	}
 
 	// Unmarshal message.  NOTE: This must be a *bytes.Buffer since the
-	// MsgVersion BtcDecode function requires it.
+	// MsgVersion BteDecode function requires it.
 	pr := bytes.NewBuffer(payload)
-	err = msg.BtcDecode(pr, pver, enc)
+	err = msg.BteDecode(pr, pver, enc)
 	if err != nil {
 		return totalBytes, nil, nil, err
 	}

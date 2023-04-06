@@ -114,8 +114,8 @@ const (
 	// 0.19.0.
 	BitcoindPost19
 
-	// Btcd represents a catch-all bted version.
-	Btcd
+	// Bted represents a catch-all bted version.
+	Bted
 )
 
 // Client represents a Bitcoin RPC client which allows easy access to the
@@ -1623,7 +1623,7 @@ func (c *Client) BackendVersion() (BackendVersion, error) {
 	// Parse the bted version and cache it.
 	case nil:
 		log.Debugf("Detected bted version: %v", info.Version)
-		version := Btcd
+		version := Bted
 		c.backendVersion = &version
 		return *c.backendVersion, nil
 

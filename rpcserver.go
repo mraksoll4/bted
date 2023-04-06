@@ -505,7 +505,7 @@ func peerExists(connMgr rpcserverConnManager, addr string, nodeID int32) bool {
 // latest protocol version and returns a hex-encoded string of the result.
 func messageToHex(msg wire.Message) (string, error) {
 	var buf bytes.Buffer
-	if err := msg.BtcEncode(&buf, maxProtocolVersion, wire.WitnessEncoding); err != nil {
+	if err := msg.BteEncode(&buf, maxProtocolVersion, wire.WitnessEncoding); err != nil {
 		context := fmt.Sprintf("Failed to encode msg of type %T", msg)
 		return "", internalRPCError(err.Error(), context)
 	}
@@ -4191,7 +4191,7 @@ func (s *rpcServer) jsonRPCRead(w http.ResponseWriter, r *http.Request, isAdmin 
 			// Bitcoin Core serves requests with "id":null or even an absent "id",
 			// and responds to such requests with "id":null in the response.
 			//
-			// Btcd does not respond to any request without and "id" or "id":null,
+			// Bted does not respond to any request without and "id" or "id":null,
 			// regardless the indicated JSON-RPC protocol version unless RPC quirks
 			// are enabled. With RPC quirks enabled, such requests will be responded
 			// to if the reqeust does not indicate JSON-RPC version.

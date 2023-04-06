@@ -12,10 +12,10 @@ import (
 	"github.com/mraksoll4/bted/btcjson"
 )
 
-// TestBtcdExtCustomResults ensures any results that have custom marshalling
+// TestBtedExtCustomResults ensures any results that have custom marshalling
 // work as inteded.
 // and unmarshal code of results are as expected.
-func TestBtcdExtCustomResults(t *testing.T) {
+func TestBtedExtCustomResults(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {

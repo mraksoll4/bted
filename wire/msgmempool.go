@@ -17,25 +17,25 @@ import (
 // starting with BIP0035Version.
 type MsgMemPool struct{}
 
-// BtcDecode decodes r using the bitcoin protocol encoding into the receiver.
+// BteDecode decodes r using the bitcoin protocol encoding into the receiver.
 // This is part of the Message interface implementation.
-func (msg *MsgMemPool) BtcDecode(r io.Reader, pver uint32, enc MessageEncoding) error {
+func (msg *MsgMemPool) BteDecode(r io.Reader, pver uint32, enc MessageEncoding) error {
 	if pver < BIP0035Version {
 		str := fmt.Sprintf("mempool message invalid for protocol "+
 			"version %d", pver)
-		return messageError("MsgMemPool.BtcDecode", str)
+		return messageError("MsgMemPool.BteDecode", str)
 	}
 
 	return nil
 }
 
-// BtcEncode encodes the receiver to w using the bitcoin protocol encoding.
+// BteEncode encodes the receiver to w using the bitcoin protocol encoding.
 // This is part of the Message interface implementation.
-func (msg *MsgMemPool) BtcEncode(w io.Writer, pver uint32, enc MessageEncoding) error {
+func (msg *MsgMemPool) BteEncode(w io.Writer, pver uint32, enc MessageEncoding) error {
 	if pver < BIP0035Version {
 		str := fmt.Sprintf("mempool message invalid for protocol "+
 			"version %d", pver)
-		return messageError("MsgMemPool.BtcEncode", str)
+		return messageError("MsgMemPool.BteEncode", str)
 	}
 
 	return nil

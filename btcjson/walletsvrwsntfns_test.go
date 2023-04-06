@@ -49,10 +49,10 @@ func TestWalletSvrWsNtfns(t *testing.T) {
 				return btcjson.NewCmd("btedconnected", true)
 			},
 			staticNtfn: func() interface{} {
-				return btcjson.NewBtcdConnectedNtfn(true)
+				return btcjson.NewBtedConnectedNtfn(true)
 			},
 			marshalled: `{"jsonrpc":"1.0","method":"btedconnected","params":[true],"id":null}`,
-			unmarshalled: &btcjson.BtcdConnectedNtfn{
+			unmarshalled: &btcjson.BtedConnectedNtfn{
 				Connected: true,
 			},
 		},
