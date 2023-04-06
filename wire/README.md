@@ -19,7 +19,7 @@ protocol level.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/wire
+$ go get -u github.com/mraksoll4/bted/wire
 ```
 
 ## Bitcoin Message Overview

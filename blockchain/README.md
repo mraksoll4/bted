@@ -21,7 +21,7 @@ block chain.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/blockchain
+$ go get -u github.com/mraksoll4/bted/blockchain
 ```
 
 ## Bitcoin Chain Processing Overview

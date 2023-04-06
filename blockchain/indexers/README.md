@@ -23,7 +23,7 @@ via an RPC interface.
 ## Installation
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/blockchain/indexers
+$ go get -u github.com/mraksoll4/bted/blockchain/indexers
 ```
 
 ## License

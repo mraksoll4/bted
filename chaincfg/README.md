@@ -56,7 +56,7 @@ func main() {
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/chaincfg
+$ go get -u github.com/mraksoll4/bted/chaincfg
 ```
 
 ## GPG Verification Key

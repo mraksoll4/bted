@@ -13,7 +13,7 @@ Test vectors from BIP 173 are added to ensure compatibility with the BIP.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/btcutil/bech32
+$ go get -u github.com/mraksoll4/bted/btcutil/bech32
 ```
 
 ## Examples

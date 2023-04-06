@@ -16,7 +16,7 @@ report.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/btcutil/coinset
+$ go get -u github.com/mraksoll4/bted/btcutil/coinset
 ```
 
 ## Usage

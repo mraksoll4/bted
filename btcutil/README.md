@@ -20,7 +20,7 @@ provided.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/btcutil
+$ go get -u github.com/mraksoll4/bted/btcutil
 ```
 
 ## GPG Verification Key

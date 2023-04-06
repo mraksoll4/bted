@@ -14,7 +14,7 @@ A comprehensive suite of tests is provided to ensure proper functionality.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/btcutil/base58
+$ go get -u github.com/mraksoll4/bted/btcutil/base58
 ```
 
 ## Examples

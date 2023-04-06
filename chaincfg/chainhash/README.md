@@ -12,7 +12,7 @@ specific hash algorithm to be abstracted.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcd/chaincfg/chainhash
+$ go get -u github.com/mraksoll4/bted/chaincfg/chainhash
 ```
 
 ## GPG Verification Key
