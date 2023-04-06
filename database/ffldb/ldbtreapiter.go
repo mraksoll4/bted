@@ -5,7 +5,7 @@
 package ffldb
 
 import (
-	"github.com/btcsuite/btcd/database/internal/treap"
+	"github.com/mraksoll4/bted/database/internal/treap"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )

@@ -12,12 +12,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/btcsuite/btcd/blockchain"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/mining"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcd/btcutil"
+	"github.com/mraksoll4/bted/blockchain"
+	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/mraksoll4/bted/mining"
+	"github.com/mraksoll4/bted/wire"
+	"github.com/mraksoll4/bted/btcutil"
 )
 
 const (

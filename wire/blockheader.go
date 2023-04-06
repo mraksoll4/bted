@@ -11,7 +11,7 @@ import (
 
 	"github.com/bitweb-project/bitweb_yespower_go"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/mraksoll4/bted/chaincfg/chainhash"
 )
 
 // MaxBlockHeaderPayload is the maximum number of bytes a block header can be.

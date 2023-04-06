@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/btcsuite/btcd/btcutil"
+	"github.com/mraksoll4/bted/btcutil"
 )
 
 func ExampleAmount() {

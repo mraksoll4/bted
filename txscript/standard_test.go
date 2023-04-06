@@ -11,9 +11,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/btcsuite/btcd/btcutil"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/mraksoll4/bted/btcutil"
+	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/mraksoll4/bted/wire"
 )
 
 // mustParseShortForm parses the passed short form script and returns the

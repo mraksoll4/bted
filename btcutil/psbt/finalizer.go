@@ -15,8 +15,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/mraksoll4/bted/txscript"
+	"github.com/mraksoll4/bted/wire"
 )
 
 // isFinalized considers this input finalized if it contains at least one of
