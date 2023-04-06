@@ -119,40 +119,40 @@ func TestAmountUnitConversions(t *testing.T) {
 		s         string
 	}{
 		{
-			name:      "MBTC",
+			name:      "MBTE",
 			amount:    MaxSatoshi,
-			unit:      AmountMegaBTC,
+			unit:      AmountMegaBTE,
 			converted: 21,
-			s:         "21 MBTC",
+			s:         "21 MBTE",
 		},
 		{
-			name:      "kBTC",
+			name:      "kBTE",
 			amount:    44433322211100,
-			unit:      AmountKiloBTC,
+			unit:      AmountKiloBTE,
 			converted: 444.33322211100,
-			s:         "444.333222111 kBTC",
+			s:         "444.333222111 kBTE",
 		},
 		{
-			name:      "BTC",
+			name:      "BTE",
 			amount:    44433322211100,
-			unit:      AmountBTC,
+			unit:      AmountBTE,
 			converted: 444333.22211100,
-			s:         "444333.222111 BTC",
+			s:         "444333.222111 BTE",
 		},
 		{
-			name:      "mBTC",
+			name:      "mBTE",
 			amount:    44433322211100,
-			unit:      AmountMilliBTC,
+			unit:      AmountMilliBTE,
 			converted: 444333222.11100,
-			s:         "444333222.111 mBTC",
+			s:         "444333222.111 mBTE",
 		},
 		{
 
-			name:      "μBTC",
+			name:      "μBTE",
 			amount:    44433322211100,
-			unit:      AmountMicroBTC,
+			unit:      AmountMicroBTE,
 			converted: 444333222111.00,
-			s:         "444333222111 μBTC",
+			s:         "444333222111 μBTE",
 		},
 		{
 
@@ -168,7 +168,7 @@ func TestAmountUnitConversions(t *testing.T) {
 			amount:    44433322211100,
 			unit:      AmountUnit(-1),
 			converted: 4443332.2211100,
-			s:         "4443332.22111 1e-1 BTC",
+			s:         "4443332.22111 1e-1 BTE",
 		},
 	}
 
@@ -185,15 +185,15 @@ func TestAmountUnitConversions(t *testing.T) {
 			continue
 		}
 
-		// Verify that Amount.ToBTC works as advertised.
-		f1 := test.amount.ToUnit(AmountBTC)
-		f2 := test.amount.ToBTC()
+		// Verify that Amount.ToBTE works as advertised.
+		f1 := test.amount.ToUnit(AmountBTE)
+		f2 := test.amount.ToBTE()
 		if f1 != f2 {
-			t.Errorf("%v: ToBTC does not match ToUnit(AmountBTC): %v != %v", test.name, f1, f2)
+			t.Errorf("%v: ToBTE does not match ToUnit(AmountBTE): %v != %v", test.name, f1, f2)
 		}
 
 		// Verify that Amount.String works as advertised.
-		s1 := test.amount.Format(AmountBTC)
+		s1 := test.amount.Format(AmountBTE)
 		s2 := test.amount.String()
 		if s1 != s2 {
 			t.Errorf("%v: String does not match Format(AmountBitcoin): %v != %v", test.name, s1, s2)
@@ -209,52 +209,52 @@ func TestAmountMulF64(t *testing.T) {
 		res  Amount
 	}{
 		{
-			name: "Multiply 0.1 BTC by 2",
-			amt:  100e5, // 0.1 BTC
+			name: "Multiply 0.1 BTE by 2",
+			amt:  100e5, // 0.1 BTE
 			mul:  2,
-			res:  200e5, // 0.2 BTC
+			res:  200e5, // 0.2 BTE
 		},
 		{
-			name: "Multiply 0.2 BTC by 0.02",
-			amt:  200e5, // 0.2 BTC
+			name: "Multiply 0.2 BTE by 0.02",
+			amt:  200e5, // 0.2 BTE
 			mul:  1.02,
-			res:  204e5, // 0.204 BTC
+			res:  204e5, // 0.204 BTE
 		},
 		{
-			name: "Multiply 0.1 BTC by -2",
-			amt:  100e5, // 0.1 BTC
+			name: "Multiply 0.1 BTE by -2",
+			amt:  100e5, // 0.1 BTE
 			mul:  -2,
-			res:  -200e5, // -0.2 BTC
+			res:  -200e5, // -0.2 BTE
 		},
 		{
-			name: "Multiply 0.2 BTC by -0.02",
-			amt:  200e5, // 0.2 BTC
+			name: "Multiply 0.2 BTE by -0.02",
+			amt:  200e5, // 0.2 BTE
 			mul:  -1.02,
-			res:  -204e5, // -0.204 BTC
+			res:  -204e5, // -0.204 BTE
 		},
 		{
-			name: "Multiply -0.1 BTC by 2",
-			amt:  -100e5, // -0.1 BTC
+			name: "Multiply -0.1 BTE by 2",
+			amt:  -100e5, // -0.1 BTE
 			mul:  2,
-			res:  -200e5, // -0.2 BTC
+			res:  -200e5, // -0.2 BTE
 		},
 		{
-			name: "Multiply -0.2 BTC by 0.02",
-			amt:  -200e5, // -0.2 BTC
+			name: "Multiply -0.2 BTE by 0.02",
+			amt:  -200e5, // -0.2 BTE
 			mul:  1.02,
-			res:  -204e5, // -0.204 BTC
+			res:  -204e5, // -0.204 BTE
 		},
 		{
-			name: "Multiply -0.1 BTC by -2",
-			amt:  -100e5, // -0.1 BTC
+			name: "Multiply -0.1 BTE by -2",
+			amt:  -100e5, // -0.1 BTE
 			mul:  -2,
-			res:  200e5, // 0.2 BTC
+			res:  200e5, // 0.2 BTE
 		},
 		{
-			name: "Multiply -0.2 BTC by -0.02",
-			amt:  -200e5, // -0.2 BTC
+			name: "Multiply -0.2 BTE by -0.02",
+			amt:  -200e5, // -0.2 BTE
 			mul:  -1.02,
-			res:  204e5, // 0.204 BTC
+			res:  204e5, // 0.204 BTE
 		},
 		{
 			name: "Round down",
@@ -270,9 +270,9 @@ func TestAmountMulF64(t *testing.T) {
 		},
 		{
 			name: "Multiply by 0.",
-			amt:  1e8, // 1 BTC
+			amt:  1e8, // 1 BTE
 			mul:  0,
-			res:  0, // 0 BTC
+			res:  0, // 0 BTE
 		},
 		{
 			name: "Multiply 1 by 0.5.",

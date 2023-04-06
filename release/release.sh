@@ -36,9 +36,9 @@ gzip -f $PACKAGESRC > "$PACKAGESRC.gz"
 
 cd $MAINDIR
 
-# If BTCDBUILDSYS is set the default list is ignored. Useful to release
+# If BTEDBUILDSYS is set the default list is ignored. Useful to release
 # for a subset of systems/architectures.
-SYS=${BTCDBUILDSYS:-"
+SYS=${BTEDBUILDSYS:-"
         darwin-amd64
         dragonfly-amd64
         freebsd-386

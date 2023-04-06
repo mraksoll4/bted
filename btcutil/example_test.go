@@ -18,9 +18,9 @@ func ExampleAmount() {
 	a = bteutil.Amount(1e5)
 	fmt.Println("100,000 Satoshis:", a)
 	// Output:
-	// Zero Satoshi: 0 BTC
-	// 100,000,000 Satoshis: 1 BTC
-	// 100,000 Satoshis: 0.001 BTC
+	// Zero Satoshi: 0 BTE
+	// 100,000,000 Satoshis: 1 BTE
+	// 100,000 Satoshis: 0.001 BTE
 }
 
 func ExampleNewAmount() {
@@ -52,25 +52,25 @@ func ExampleNewAmount() {
 	}
 	fmt.Println(amountNaN) //Output 4
 
-	// Output: 1 BTC
-	// 0.01234567 BTC
-	// 0 BTC
+	// Output: 1 BTE
+	// 0.01234567 BTE
+	// 0 BTE
 	// invalid bitcoin amount
 }
 
 func ExampleAmount_unitConversions() {
 	amount := bteutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBTC:", amount.Format(bteutil.AmountKiloBTC))
-	fmt.Println("Satoshi to BTC:", amount)
-	fmt.Println("Satoshi to MilliBTC:", amount.Format(bteutil.AmountMilliBTC))
-	fmt.Println("Satoshi to MicroBTC:", amount.Format(bteutil.AmountMicroBTC))
+	fmt.Println("Satoshi to kBTE:", amount.Format(bteutil.AmountKiloBTE))
+	fmt.Println("Satoshi to BTE:", amount)
+	fmt.Println("Satoshi to MilliBTE:", amount.Format(bteutil.AmountMilliBTE))
+	fmt.Println("Satoshi to MicroBTE:", amount.Format(bteutil.AmountMicroBTE))
 	fmt.Println("Satoshi to Satoshi:", amount.Format(bteutil.AmountSatoshi))
 
 	// Output:
-	// Satoshi to kBTC: 444.333222111 kBTC
-	// Satoshi to BTC: 444333.222111 BTC
-	// Satoshi to MilliBTC: 444333222.111 mBTC
-	// Satoshi to MicroBTC: 444333222111 μBTC
+	// Satoshi to kBTE: 444.333222111 kBTE
+	// Satoshi to BTE: 444333.222111 BTE
+	// Satoshi to MilliBTE: 444333222.111 mBTE
+	// Satoshi to MicroBTE: 444333222111 μBTE
 	// Satoshi to Satoshi: 44433322211100 Satoshi
 }

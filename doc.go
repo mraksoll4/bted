@@ -82,7 +82,7 @@ Application Options:
                               addresses to use for generated blocks -- At least
                               one address is required if the generate option is
                               set
-      --minrelaytxfee=        The minimum transaction fee in BTC/kB to be
+      --minrelaytxfee=        The minimum transaction fee in BTE/kB to be
                               considered a non-zero fee. (default: 1e-05)
       --nobanning             Disable banning of misbehaving peers
       --nocfilters            Disable committed filtering (CF) support
