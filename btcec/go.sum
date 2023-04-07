@@ -1,3 +1,5 @@
+github.com/bitweb-project/bitweb_yespower_go v1.0.1 h1:rm5Oyq4g8wgUci8MyVz8/kn+HeEJrfwe+EuybQslSus=
+github.com/bitweb-project/bitweb_yespower_go v1.0.1/go.mod h1:7LCbOoQoI3h0goKvpKORSsioUBCJfF420rHtcoOEfDQ=
 github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2 h1:36tK65BUyg317s8OFXJkG3A/fdtNwdlxjEYGDmC92Lg=
 github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2/go.mod h1:TThrLo/L4QX5Tt/rQVrFoVY5PqDYeKkGzkzLknQo3MY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
