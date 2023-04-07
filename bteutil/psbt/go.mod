@@ -3,7 +3,7 @@ module github.com/mraksoll4/bted/bteutil/psbt
 go 1.17
 
 require (
-	github.com/mraksoll4/bted v0.0.0-20230407000000-000000000000
+	github.com/mraksoll4/bted v0.23.3
 	github.com/mraksoll4/bted/btcec/v2 v2.1.3
 	github.com/mraksoll4/bted/bteutil v1.1.0
 	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2
