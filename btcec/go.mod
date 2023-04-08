@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/bitweb-project/bitweb_yespower_go v1.0.2 // indirect
+	github.com/bitweb-project/bitweb_yespower_go v1.0.3 // indirect
 	github.com/decred/dcrd/crypto/blake256 v1.0.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
