@@ -9,7 +9,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/bitweb-project/bitweb_yespower_go"
+	"github.com/bitweb-project/yespower_go"
 
 	"github.com/mraksoll4/bted/chaincfg/chainhash"
 )
@@ -56,7 +56,7 @@ func (h *BlockHeader) BlockHash() chainhash.Hash {
 	buf := bytes.NewBuffer(make([]byte, 0, MaxBlockHeaderPayload))
 	_ = writeBlockHeader(buf, 0, h)
        
-	hashedYespower := bitweb_yespower_go.YespowerHash(buf.Bytes())
+	hashedYespower := yespower.YespowerHash(buf.Bytes())
 	copy(blockhash[:], hashedYespower)
 
 	return blockhash
