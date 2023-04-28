@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/aead/siphash v1.0.1
-	github.com/mraksoll4/bted v0.23.6
+	github.com/mraksoll4/bted v0.23.7
 	github.com/mraksoll4/bted/btcec/v2 v2.1.3
 	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2
 	github.com/davecgh/go-spew v1.1.1

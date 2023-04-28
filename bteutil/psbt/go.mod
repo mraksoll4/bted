@@ -3,9 +3,9 @@ module github.com/mraksoll4/bted/bteutil/psbt
 go 1.17
 
 require (
-	github.com/mraksoll4/bted v0.23.6
+	github.com/mraksoll4/bted v0.23.7
 	github.com/mraksoll4/bted/btcec/v2 v2.1.3
-	github.com/mraksoll4/bted/bteutil v1.1.4
+	github.com/mraksoll4/bted/bteutil v1.1.5
 	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/stretchr/testify v1.7.0
