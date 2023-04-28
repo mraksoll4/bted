@@ -1,5 +1,5 @@
-github.com/bitweb-project/yespower_go v1.0.1 h1:dJL1IclxJMDuavi1kHPOi2jyoHNwuGx56T95WMwCQkk=
-github.com/bitweb-project/yespower_go v1.0.1/go.mod h1:NIn6GgEWLdnQmRq+dNSKjlQf8BrLCiDtG7I3z4ajhdI=
+github.com/bitweb-project/yespower_go v1.0.2 h1:qBPTUoPL07Laq+GOkT85yqXTS440WTis8BR0Oc+c/K0=
+github.com/bitweb-project/yespower_go v1.0.2/go.mod h1:rrjrWbff6jaEVH+rKCBWQs63JYwE9wc4TRVx2CBG/gM=
 github.com/aead/siphash v1.0.1/go.mod h1:Nywa3cDsYNNK3gaciGTWPwHt0wlpNV15vwmswBAUSII=
 github.com/mraksoll4/bted/btcec/v2 v2.1.3 h1:1DL/oWxzy+DpxT3IWI5bzIpDVJQR/3mJ5aNHhdzRa0Y=
 github.com/mraksoll4/bted/btcec/v2 v2.1.3/go.mod h1:H/XbYaRSDeRCNaYVp48vU6EkdnN5VRKqQOwiJGt5mLI=

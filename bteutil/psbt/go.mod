@@ -3,9 +3,9 @@ module github.com/mraksoll4/bted/bteutil/psbt
 go 1.17
 
 require (
-	github.com/mraksoll4/bted v0.23.5
+	github.com/mraksoll4/bted v0.23.6
 	github.com/mraksoll4/bted/btcec/v2 v2.1.3
-	github.com/mraksoll4/bted/bteutil v1.1.3
+	github.com/mraksoll4/bted/bteutil v1.1.4
 	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/stretchr/testify v1.7.0
@@ -16,7 +16,7 @@ require (
 	github.com/decred/dcrd/crypto/blake256 v1.0.0 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/bitweb-project/yespower_go v1.0.1 // indirect
+	github.com/bitweb-project/yespower_go v1.0.2 // indirect
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
 	golang.org/x/sys v0.0.0-20200814200057-3d37ad5750ed // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
