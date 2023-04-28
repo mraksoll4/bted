@@ -1,7 +1,7 @@
 github.com/aead/siphash v1.0.1 h1:FwHfE/T45KPKYuuSAKyyvE+oPWcaQ+CUmFW0bPlM+kg=
 github.com/aead/siphash v1.0.1/go.mod h1:Nywa3cDsYNNK3gaciGTWPwHt0wlpNV15vwmswBAUSII=
-github.com/bitweb-project/yespower_go v1.0.2 h1:qBPTUoPL07Laq+GOkT85yqXTS440WTis8BR0Oc+c/K0=
-github.com/bitweb-project/yespower_go v1.0.2/go.mod h1:rrjrWbff6jaEVH+rKCBWQs63JYwE9wc4TRVx2CBG/gM=
+github.com/bitweb-project/yespower_go v1.0.3 h1:c0/s9/Md4G/YqRQASGu4JIejKWXNlWiKatEdWP+tiJI=
+github.com/bitweb-project/yespower_go v1.0.3/go.mod h1:rrjrWbff6jaEVH+rKCBWQs63JYwE9wc4TRVx2CBG/gM=
 github.com/btcsuite/btclog v0.0.0-20170628155309-84c8d2346e9f h1:bAs4lUbRJpnnkd9VhRV3jjAVU7DJVjMaK+IsvSeZvFo=
 github.com/btcsuite/btclog v0.0.0-20170628155309-84c8d2346e9f/go.mod h1:TdznJufoqS23FtqVCzL0ZqgP5MqXbb4fg/WgDys70nA=
 github.com/btcsuite/go-socks v0.0.0-20170105172521-4720035b7bfd/go.mod h1:HHNXQzUsZCxOoE+CPiyCTO6x34Zs86zZUiwtpXoGdtg=
