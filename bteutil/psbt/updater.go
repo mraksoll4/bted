@@ -14,9 +14,9 @@ import (
 	"bytes"
 	"crypto/sha256"
 
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // Updater encapsulates the role 'Updater' as specified in BIP174; it accepts

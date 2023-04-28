@@ -12,15 +12,15 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/mraksoll4/bted/blockchain"
-	"github.com/mraksoll4/bted/blockchain/fullblocktests"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/database"
-	_ "github.com/mraksoll4/bted/database/ffldb"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/blockchain"
+	"github.com/bitweb-project/bted/blockchain/fullblocktests"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/database"
+	_ "github.com/bitweb-project/bted/database/ffldb"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 const (

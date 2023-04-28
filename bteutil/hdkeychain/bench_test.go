@@ -7,7 +7,7 @@ package hdkeychain_test
 import (
 	"testing"
 
-	"github.com/mraksoll4/bted/bteutil/hdkeychain"
+	"github.com/bitweb-project/bted/bteutil/hdkeychain"
 )
 
 // bip0032MasterPriv1 is the master private extended key from the first set of

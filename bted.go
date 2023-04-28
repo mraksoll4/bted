@@ -15,10 +15,10 @@ import (
 	"runtime/debug"
 	"runtime/pprof"
 
-	"github.com/mraksoll4/bted/blockchain/indexers"
-	"github.com/mraksoll4/bted/database"
-	"github.com/mraksoll4/bted/limits"
-	"github.com/mraksoll4/bted/ossec"
+	"github.com/bitweb-project/bted/blockchain/indexers"
+	"github.com/bitweb-project/bted/database"
+	"github.com/bitweb-project/bted/limits"
+	"github.com/bitweb-project/bted/ossec"
 )
 
 const (

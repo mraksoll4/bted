@@ -2,8 +2,8 @@ package psbt
 
 import (
 	"bytes"
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcec/v2/ecdsa"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/btcec/v2/ecdsa"
 )
 
 // PartialSig encapsulate a (BTC public key, ECDSA signature)

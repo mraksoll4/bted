@@ -9,9 +9,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil/bloom"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil/bloom"
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

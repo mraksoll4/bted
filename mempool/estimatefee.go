@@ -16,9 +16,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/mining"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/mining"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // TODO incorporate Alex Morcos' modifications to Gavin's initial model

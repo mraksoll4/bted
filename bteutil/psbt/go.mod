@@ -1,12 +1,12 @@
-module github.com/mraksoll4/bted/bteutil/psbt
+module github.com/bitweb-project/bted/bteutil/psbt
 
 go 1.17
 
 require (
-	github.com/mraksoll4/bted
-	github.com/mraksoll4/bted/btcec/v2 v2.1.3
-	github.com/mraksoll4/bted/bteutil v1.1.0
-	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.1
+	github.com/bitweb-project/bted
+	github.com/bitweb-project/bted/btcec/v2 v2.1.3
+	github.com/bitweb-project/bted/bteutil v1.1.0
+	github.com/bitweb-project/bted/chaincfg/chainhash v1.0.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/stretchr/testify v1.7.0
 )
@@ -21,6 +21,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
 
-replace github.com/mraksoll4/bted/bteutil => ../
+replace github.com/bitweb-project/bted/bteutil => ../
 
-replace github.com/mraksoll4/bted => ../..
+replace github.com/bitweb-project/bted => ../..

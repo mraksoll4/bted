@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // helpDescsEnUS defines the English descriptions used for the help strings.

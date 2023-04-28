@@ -7,7 +7,7 @@ package wire
 import (
 	"io"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
 )
 
 // MsgGetCFHeaders is a message similar to MsgGetHeaders, but for committed

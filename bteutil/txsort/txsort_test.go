@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil/txsort"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil/txsort"
 )
 
 // TestSort ensures the transaction sorting works according to the BIP.

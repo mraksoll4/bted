@@ -22,7 +22,7 @@ A comprehensive suite of tests is provided to ensure proper functionality.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/bteutil/txsort
+$ go get -u github.com/bitweb-project/bted/bteutil/txsort
 ```
 
 ## License

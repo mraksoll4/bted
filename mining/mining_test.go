@@ -9,7 +9,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // TestTxFeePrioHeap ensures the priority queue for transaction fees and

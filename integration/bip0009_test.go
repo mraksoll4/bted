@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mraksoll4/bted/blockchain"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/integration/rpctest"
+	"github.com/bitweb-project/bted/blockchain"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/integration/rpctest"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // TestBtedExtCustomResults ensures any results that have custom marshalling

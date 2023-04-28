@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/bteutil/base58"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil/base58"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
 )
 
 const (

@@ -20,7 +20,7 @@ of blocks that exercise the consensus validation rules.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/blockchain/fullblocktests
+$ go get -u github.com/bitweb-project/bted/blockchain/fullblocktests
 ```
 
 ## License

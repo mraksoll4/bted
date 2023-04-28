@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	. "github.com/mraksoll4/bted/chaincfg"
+	. "github.com/bitweb-project/bted/chaincfg"
 )
 
 // Define some of the required parameters for a user-registered

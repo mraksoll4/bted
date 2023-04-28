@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mraksoll4/bted/txscript"
+	"github.com/bitweb-project/bted/txscript"
 )
 
 // TestCheckBlockScripts ensures that validating the all of the scripts in a

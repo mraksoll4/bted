@@ -1,9 +1,9 @@
-module github.com/mraksoll4/bted/btcec/v2
+module github.com/bitweb-project/bted/btcec/v2
 
 go 1.17
 
 require (
-	github.com/mraksoll4/bted/chaincfg/chainhash v1.0.2
+	github.com/bitweb-project/bted/chaincfg/chainhash v1.0.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 )

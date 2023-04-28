@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mraksoll4/bted/database"
-	_ "github.com/mraksoll4/bted/database/ffldb"
+	"github.com/bitweb-project/bted/database"
+	_ "github.com/bitweb-project/bted/database/ffldb"
 )
 
 var (

@@ -12,9 +12,9 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // ScriptFlags is a bitmask defining additional operations or tests that will be

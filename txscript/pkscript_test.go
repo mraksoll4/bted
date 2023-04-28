@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // TestParsePkScript ensures that the supported script types can be parsed

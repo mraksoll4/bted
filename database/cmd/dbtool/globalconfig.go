@@ -10,11 +10,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/database"
-	_ "github.com/mraksoll4/bted/database/ffldb"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/database"
+	_ "github.com/bitweb-project/bted/database/ffldb"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 var (

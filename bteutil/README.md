@@ -20,7 +20,7 @@ provided.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/bteutil
+$ go get -u github.com/bitweb-project/bted/bteutil
 ```
 
 ## GPG Verification Key

@@ -5,11 +5,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcec/v2/ecdsa"
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/btcec/v2/ecdsa"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/wire"
 	"golang.org/x/crypto/ripemd160"
 )
 

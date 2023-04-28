@@ -11,11 +11,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/database"
-	_ "github.com/mraksoll4/bted/database/ffldb"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/database"
+	_ "github.com/bitweb-project/bted/database/ffldb"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // This example demonstrates creating a new database.
@@ -23,8 +23,8 @@ func ExampleCreate() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/mraksoll4/bted/database"
-	// 	_ "github.com/mraksoll4/bted/database/ffldb"
+	// 	"github.com/bitweb-project/bted/database"
+	// 	_ "github.com/bitweb-project/bted/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -49,8 +49,8 @@ func Example_basicUsage() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/mraksoll4/bted/database"
-	// 	_ "github.com/mraksoll4/bted/database/ffldb"
+	// 	"github.com/bitweb-project/bted/database"
+	// 	_ "github.com/bitweb-project/bted/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -115,8 +115,8 @@ func Example_blockStorageAndRetrieval() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/mraksoll4/bted/database"
-	// 	_ "github.com/mraksoll4/bted/database/ffldb"
+	// 	"github.com/bitweb-project/bted/database"
+	// 	_ "github.com/bitweb-project/bted/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.

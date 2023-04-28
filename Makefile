@@ -1,4 +1,4 @@
-PKG := github.com/mraksoll4/bted
+PKG := github.com/bitweb-project/bted
 
 LINT_PKG := github.com/golangci/golangci-lint/cmd/golangci-lint
 GOACC_PKG := github.com/ory/go-acc

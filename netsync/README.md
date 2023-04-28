@@ -17,7 +17,7 @@ longest chain the sync peer is aware of.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/netsync
+$ go get -u github.com/bitweb-project/bted/netsync
 ```
 
 ## License

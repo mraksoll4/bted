@@ -7,7 +7,7 @@ package btcjson_test
 import (
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // TestErrorCodeStringer tests the stringized output for the ErrorCode type.

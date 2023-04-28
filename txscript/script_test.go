@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // TestPushedData ensured the PushedData function extracts the expected data out

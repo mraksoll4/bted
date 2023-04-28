@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // addrIndexBucket provides a mock address index database bucket by implementing

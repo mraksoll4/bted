@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
 )
 
 const (

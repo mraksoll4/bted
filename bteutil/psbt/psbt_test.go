@@ -12,10 +12,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/require"
 )

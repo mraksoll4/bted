@@ -11,13 +11,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/mraksoll4/bted/blockchain"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/mining"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/blockchain"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/mining"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // solveBlock attempts to find a nonce which makes the passed block header hash

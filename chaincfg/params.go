@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // These variables are the chain proof-of-work limit parameters for each default

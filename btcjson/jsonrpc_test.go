@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // TestIsValidIDType ensures the IsValidIDType function behaves as expected.

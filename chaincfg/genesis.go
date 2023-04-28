@@ -7,8 +7,8 @@ package chaincfg
 import (
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // genesisCoinbaseTx is the coinbase transaction for the genesis blocks for

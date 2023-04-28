@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // testNoncePrng provides a deterministic prng for the nonce in generated fake

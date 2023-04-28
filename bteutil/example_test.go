@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 func ExampleAmount() {

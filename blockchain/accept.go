@@ -7,8 +7,8 @@ package blockchain
 import (
 	"fmt"
 
-	"github.com/mraksoll4/bted/database"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/database"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // maybeAcceptBlock potentially accepts a block into the block chain and, if

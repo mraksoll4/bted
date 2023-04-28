@@ -7,7 +7,7 @@ package blockchain
 import (
 	"testing"
 
-	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg"
 )
 
 // TestNotifications ensures that notification callbacks are fired on events.

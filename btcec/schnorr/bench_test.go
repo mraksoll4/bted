@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcec/v2"
+	"github.com/bitweb-project/bted/btcec/v2"
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 )
 

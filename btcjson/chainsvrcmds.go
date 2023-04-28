@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // AddNodeSubCmd defines the type used in the addnode JSON-RPC command for the

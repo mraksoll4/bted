@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // TxIndexUnknown is the value returned for a transaction index that is unknown.

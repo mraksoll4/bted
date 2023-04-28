@@ -5,7 +5,7 @@
 package blockchain
 
 import (
-	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg"
 )
 
 const (

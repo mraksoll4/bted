@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mraksoll4/bted/btcutil"
-	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/bitweb-project/bted/btcutil"
+	"github.com/bitweb-project/bted/chaincfg"
 )
 
 var testnet = flag.Bool("testnet", false, "operate on the testnet Bitcoin network")
@@ -56,7 +56,7 @@ func main() {
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/chaincfg
+$ go get -u github.com/bitweb-project/bted/chaincfg
 ```
 
 ## GPG Verification Key

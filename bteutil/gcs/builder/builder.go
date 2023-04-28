@@ -10,10 +10,10 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil/gcs"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil/gcs"
 )
 
 const (

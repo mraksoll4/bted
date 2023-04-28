@@ -10,15 +10,15 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/mraksoll4/bted/blockchain"
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/bteutil/hdkeychain"
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/rpcclient"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/blockchain"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil/hdkeychain"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/rpcclient"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
 )
 
 var (

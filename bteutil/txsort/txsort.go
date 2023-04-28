@@ -11,8 +11,8 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // InPlaceSort modifies the passed transaction inputs and outputs to be sorted

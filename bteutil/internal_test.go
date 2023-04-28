@@ -12,9 +12,9 @@ interface. The functions are only exported while the tests are being run.
 package bteutil
 
 import (
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/bteutil/base58"
-	"github.com/mraksoll4/bted/bteutil/bech32"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/bteutil/base58"
+	"github.com/bitweb-project/bted/bteutil/bech32"
 	"golang.org/x/crypto/ripemd160"
 )
 

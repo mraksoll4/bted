@@ -14,8 +14,8 @@ import (
 	"runtime"
 	"time"
 
-	rpc "github.com/mraksoll4/bted/rpcclient"
-	"github.com/mraksoll4/bted/bteutil"
+	rpc "github.com/bitweb-project/bted/rpcclient"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // nodeConfig contains all the args, and data required to launch a bted process

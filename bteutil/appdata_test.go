@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // TestAppDataDir tests the API for AppDataDir to ensure it gives expected

@@ -10,9 +10,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/peer"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/peer"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // mockRemotePeer creates a basic inbound peer listening on the simnet port for

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btclog"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // blockProgressLogger provides periodic logging for other services in order

@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/mraksoll4/bted/txscript"
+	"github.com/bitweb-project/bted/txscript"
 )
 
 // CreateWalletResult models the result of the createwallet command.

@@ -47,7 +47,7 @@ implement and the API is not stable yet.
 ## Installation
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/rpcclient
+$ go get -u github.com/bitweb-project/bted/rpcclient
 ```
 
 ## License

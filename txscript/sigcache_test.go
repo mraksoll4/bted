@@ -8,9 +8,9 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcec/v2/ecdsa"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/btcec/v2/ecdsa"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
 )
 
 // genRandomSig returns a random message, a signature of the message under the

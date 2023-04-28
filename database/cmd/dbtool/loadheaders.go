@@ -7,8 +7,8 @@ package main
 import (
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/database"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/database"
 )
 
 // headersCmd defines the configuration options for the loadheaders command.

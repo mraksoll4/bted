@@ -1,3 +1,3 @@
-module github.com/mraksoll4/bted/chaincfg/chainhash
+module github.com/bitweb-project/bted/chaincfg/chainhash
 
 go 1.17

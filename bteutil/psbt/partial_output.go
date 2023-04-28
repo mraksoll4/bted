@@ -5,7 +5,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // POutput is a struct encapsulating all the data that can be attached

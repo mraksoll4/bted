@@ -12,7 +12,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // AddMultisigAddressCmd defines the addmutisigaddress JSON-RPC command.

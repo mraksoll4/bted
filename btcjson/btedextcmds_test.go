@@ -12,7 +12,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // TestBtedExtCmds tests all of the bted extended commands marshal and unmarshal

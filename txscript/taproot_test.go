@@ -12,11 +12,11 @@ import (
 	"testing"
 	"testing/quick"
 
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/btcec/v2/schnorr"
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/bteutil/hdkeychain"
-	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/btcec/v2/schnorr"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/bteutil/hdkeychain"
+	"github.com/bitweb-project/bted/chaincfg"
 	secp "github.com/decred/dcrd/dcrec/secp256k1/v4"
 	"github.com/stretchr/testify/require"
 )

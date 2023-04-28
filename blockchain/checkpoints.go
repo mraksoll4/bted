@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // CheckpointConfirmations is the number of blocks before the end of the current

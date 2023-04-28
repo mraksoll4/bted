@@ -5,8 +5,8 @@
 package blockchain
 
 import (
-	"github.com/mraksoll4/bted/btcec/v2"
-	"github.com/mraksoll4/bted/txscript"
+	"github.com/bitweb-project/bted/btcec/v2"
+	"github.com/bitweb-project/bted/txscript"
 )
 
 // -----------------------------------------------------------------------------

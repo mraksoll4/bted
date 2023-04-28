@@ -37,7 +37,7 @@ storage, and strict checksums in key areas to ensure data integrity.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/mraksoll4/bted/database
+$ go get -u github.com/bitweb-project/bted/database
 ```
 
 ## Examples

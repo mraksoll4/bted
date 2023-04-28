@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // Bip16Activation is the timestamp where BIP0016 is valid to use in the

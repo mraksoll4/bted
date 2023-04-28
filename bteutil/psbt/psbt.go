@@ -13,8 +13,8 @@ import (
 	"errors"
 	"io"
 
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // psbtMagicLength is the length of the magic bytes used to signal the start of

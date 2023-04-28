@@ -8,8 +8,8 @@
 package database
 
 import (
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 // Cursor represents a cursor over key/value pairs and nested buckets of a

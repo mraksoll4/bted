@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mraksoll4/bted/database"
+	"github.com/bitweb-project/bted/database"
 )
 
 // TestErrorCodeStringer tests the stringized output for the ErrorCode type.

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 var (

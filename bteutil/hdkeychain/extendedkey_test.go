@@ -17,7 +17,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/chaincfg"
+	"github.com/bitweb-project/bted/chaincfg"
 	secp_ecdsa "github.com/decred/dcrd/dcrec/secp256k1/v4"
 )
 

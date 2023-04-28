@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"hash/crc32"
 
-	"github.com/mraksoll4/bted/database"
+	"github.com/bitweb-project/bted/database"
 )
 
 // The serialized write cursor location format is:

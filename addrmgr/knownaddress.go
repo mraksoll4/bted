@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // KnownAddress tracks information about a known network address that is used

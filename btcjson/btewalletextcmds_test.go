@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
+	"github.com/bitweb-project/bted/btcjson"
 )
 
 // TestBteWalletExtCmds tests all of the btewallet extended commands marshal and

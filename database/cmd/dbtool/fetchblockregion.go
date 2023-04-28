@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/database"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/database"
 )
 
 // blockRegionCmd defines the configuration options for the fetchblockregion

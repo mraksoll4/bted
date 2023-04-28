@@ -7,7 +7,7 @@ package bloom_test
 import (
 	"testing"
 
-	"github.com/mraksoll4/bted/bteutil/bloom"
+	"github.com/bitweb-project/bted/bteutil/bloom"
 )
 
 // TestMurmurHash3 ensure the MurmurHash3 function produces the correct hash

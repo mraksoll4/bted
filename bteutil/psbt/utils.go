@@ -12,8 +12,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/mraksoll4/bted/txscript"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/txscript"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // WriteTxWitness is a utility function due to non-exported witness

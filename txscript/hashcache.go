@@ -10,8 +10,8 @@ import (
 	"math"
 	"sync"
 
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
-	"github.com/mraksoll4/bted/wire"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/wire"
 )
 
 // calcHashPrevOuts calculates a single hash of all the previous outputs

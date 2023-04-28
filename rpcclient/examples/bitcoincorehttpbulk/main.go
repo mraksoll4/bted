@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mraksoll4/bted/rpcclient"
+	"github.com/bitweb-project/bted/rpcclient"
 )
 
 func main() {

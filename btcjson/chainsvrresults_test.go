@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mraksoll4/bted/btcjson"
-	"github.com/mraksoll4/bted/bteutil"
-	"github.com/mraksoll4/bted/chaincfg/chainhash"
+	"github.com/bitweb-project/bted/btcjson"
+	"github.com/bitweb-project/bted/bteutil"
+	"github.com/bitweb-project/bted/chaincfg/chainhash"
 	"github.com/davecgh/go-spew/spew"
 )
 

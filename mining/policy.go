@@ -5,9 +5,9 @@
 package mining
 
 import (
-	"github.com/mraksoll4/bted/blockchain"
-	"github.com/mraksoll4/bted/wire"
-	"github.com/mraksoll4/bted/bteutil"
+	"github.com/bitweb-project/bted/blockchain"
+	"github.com/bitweb-project/bted/wire"
+	"github.com/bitweb-project/bted/bteutil"
 )
 
 const (
